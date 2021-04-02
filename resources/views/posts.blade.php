@@ -9,19 +9,20 @@
 </head>
 
 <body>
-    <?php foreach ($posts as $post) : ?>
+    @foreach($posts as $post)
+    @dd($loop)
     <article>
         <h1>
-            <a href="/post/<?= $post->slug; ?>">
-                <?= $post->title; ?>
+            <a href="/post/{{ $post->slug }}">
+                {{ $post->title }}
             </a>
         </h1>
 
         <div>
-            <?= $post->excerpt; ?>
+            {{ $post->excerpt  }}
         </div>
     </article>
-    <?php endforeach; ?>
+    @endforeach
 
     <a href="/">Go Back</a>
 </body>
