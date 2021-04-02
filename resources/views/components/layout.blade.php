@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    @yield('content')
+    {{ $slot }} {{-- Default slot for components --}}
 </body>
 
 </html>

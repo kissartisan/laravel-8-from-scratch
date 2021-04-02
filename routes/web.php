@@ -20,7 +20,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/post/{post}', function ($slug) {
+Route::get('/posts/{post}', function ($slug) {
     // ddd(Post::find($slug));
     return view('post', [
         'post' => Post::find($slug)
