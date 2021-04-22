@@ -11,6 +11,11 @@ class Post extends Model
 
     protected $guarded = ['id'];
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
     /** Alternatively (old way) you can use this method to change the key of route model binding */
     // public function getRouteKeyName()
     // {
